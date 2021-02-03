@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary:  #ffc500;
+    font-family:  'Montserrat', sans-serif; /*chamando a font escolhida do google fonts*/
+    font-size: 16px;
+
+}
+
+ul{
+    display: flex; /*Colocar a lista no modo horizontal*/
+    list-style: none; /*removendo o button da lista*/
+    padding-left: 0; /*deslocar a lista para esquerda*/
+}
+
+
+body{
+    margin: .625rem; /*divisão de 10/16*/ 
+    padding-top: 7.75rem;
+}
+
+.navbar{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 9fr; /*logo tenha 1 fração da barra de navegação e também que o resto do conteúdo seja 9 frações*/
+    align-items: center; /*Centralizar os itens*/
+    top:0;
+    left: 0;
+    padding: 0 1rem;
+    width: 100vw;
+    height: 7.75rem; /*altura da nav*/
+    background-color: #000;/*vermelho/ verde / azul / transparência -0 - F*/;
+    color: #fff;
+}
+
+.navbar__links li{
+    font-size: .875rem; /*14 pixel /16 pixel*/
+    margin-right: 3rem; /*definido o espaçamento entre as opções da lista empresas, eventos, galeria, depoimento, contatos*/
+    text-transform: uppercase; /*esse metodo determina que as letras da lista fiquem em caixa alta idependente de como esta no arq. html*/
+}
+
+.navbar__links{
+    justify-self: end;/*Propriedade de alinhamento para elemntos que estão dentro de um grid*/
+}
+
+.navbar__links a{
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar__links a:hover{
+    color: var(--color-primary);
+}
+
+.logo-studion{
+    font-size: 2.375rem; /*Aumenta o tamago da fonte no caso a logo*/
+    font-weight: 900;
+    line-height: 1ch; /*Unidade relativa ao tamanho da altrua do glifo 0 da fonte*/
+    text-transform: uppercase; /*caixa alta*/
+    text-align: right; /*Alinha a logo studion para direita*/
+}
+
+.logo-studion__subtitle{
+    font-size: .875rem;
+    font-weight: 300; /*peso da fonte: ou seja deixa a letra mais fina ou ao contrário*/
+    float: right;
+}
+
+.copy--primary{
+    color: var(--color-primary);
+}
