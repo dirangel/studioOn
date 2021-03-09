@@ -5,10 +5,17 @@
 }
 
 :root {
-    --color-primary:  #ffc500;
     font-family:  'Montserrat', sans-serif; /*chamando a font escolhida do google fonts*/
     font-size: 16px;
-
+    --color-primary:#ffc500;
+    --default-padding: 1rem;
+}
+body{
+    margin: 0;
+    /* margin: .625rem; /*divisão de 10/16*/  
+    padding-top: 7.75rem; 
+    /*background-color: #000;*/
+    overflow-x: hidden;
 }
 
 ul{
@@ -18,34 +25,32 @@ ul{
 }
 
 
-body{
-    margin: .625rem; /*divisão de 10/16*/ 
-    padding-top: 7.75rem;
-}
-
 .navbar{
     position: fixed;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1fr 9fr; /*logo tenha 1 fração da barra de navegação e também que o resto do conteúdo seja 9 frações*/
     align-items: center; /*Centralizar os itens*/
     top:0;
     left: 0;
-    padding: 0 1rem;
+    
     width: 100vw;
     height: 7.75rem; /*altura da nav*/
+    padding: 0 1rem;
+
     background-color: #000;/*vermelho/ verde / azul / transparência -0 - F*/;
     color: #fff;
 }
 
+.navbar__links{
+    justify-self: end;/*Propriedade de alinhamento para elemntos que estão dentro de um grid*/
+}
 .navbar__links li{
     font-size: .875rem; /*14 pixel /16 pixel*/
     margin-right: 3rem; /*definido o espaçamento entre as opções da lista empresas, eventos, galeria, depoimento, contatos*/
     text-transform: uppercase; /*esse metodo determina que as letras da lista fiquem em caixa alta idependente de como esta no arq. html*/
 }
 
-.navbar__links{
-    justify-self: end;/*Propriedade de alinhamento para elemntos que estão dentro de um grid*/
-}
 
 .navbar__links a{
     font-weight: 300;
@@ -60,17 +65,104 @@ body{
 .logo-studion{
     font-size: 2.375rem; /*Aumenta o tamago da fonte no caso a logo*/
     font-weight: 900;
-    line-height: 1ch; /*Unidade relativa ao tamanho da altrua do glifo 0 da fonte*/
+    line-height: 1ch; /*altura da linha*/
     text-transform: uppercase; /*caixa alta*/
-    text-align: right; /*Alinha a logo studion para direita*/
+    text-align: right; /*Alinha de texto*/
 }
 
 .logo-studion__subtitle{
     font-size: .875rem;
-    font-weight: 300; /*peso da fonte: ou seja deixa a letra mais fina ou ao contrário*/
-    float: right;
+    font-weight: 300; /*"espessura da fonte"*/
 }
 
 .copy--primary{
+    position: relative;
+  
+}
+
+#slider{
+    background-color: #000;
+    color: #fff;
+}
+
+.slide{
+    position: relative;
+    height: calc(100vh - 7.75rem);
+}
+
+.slide__background-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide__copy{
+    position: fixed;
+    position: absolute;
+    top: -10px; 
+    left: 40.625rem; /*650 /16px = 28.125rem*/
+    margin-top: 1.875rem; /* " margem superior "deslocamento da borda para esquerda levando o item para direira*/
+    margin-right: 5rem; /*deslocamento para baixo "Margem direita"*/
+    letter-spacing: .1875rem ; /*Espaçamento entre letras*/
+}
+
+.slide__copy h6{
+    font-size: 0.9375rem; /*font size seria 15px - Calculando deveria ser 15/16 = 0.9375*/
+    font-weight: 400;
+    text-transform: uppercase; /*caixa alta*/
+    
+}
+
+.slide__copy h2{
+    font-size: 6.25rem; /*tamanho da fonte*/
+    text-transform: uppercase;
+    line-height: 6.25rem; /*altura da linha*/
+    margin-top: 1rem;
+}
+
+.slide__copy h2 span{
+    display: block; /*faz com que a palavra creative minds quebre a linha*/
+}
+
+.btn{
+    padding: 1rem 2.5rem; /**/
+    border: 0.125rem solid #fff ;
+    border-radius: 1.625rem; /*26pixels/16 = 1.625*/
     color: var(--color-primary);
+    background: unset; /*Recetar a cor para o valor mais neutro*/
+    font-size: .9375rem;
+    font-weight: 700;
+    text-transform: uppercase; /*caixa alta*/
+    transition: 0.5s all ease; /*Controla as animações do botão*/
+}
+
+/*Seletor para mais de um caso*/
+.btn:hover, .btn:active, .btn:focus{
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+#counter{
+    background-color: var(--color-primary);
+    color: white;
+    text-transform: uppercase;
+}
+
+.counter__container{
+    display: grid; /*distanciou uma grid da outra e movou para baixo*/
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); /*Dividiu o texto + de 500 eventos em 3 partes*/
+    place-items: center; /*centralizou as gris com os textos no meio da tela*/
+    margin: 0;
+    padding: 4.375rem 1rem;
+}
+
+.counter__container h3{
+    font-size: 2.1875rem;
+}
+
+.counter__container h3 small {
+    display: block;
+    font-size: 1.25rem;
 }
