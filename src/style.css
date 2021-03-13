@@ -349,12 +349,9 @@ ul {
   /* line-height: 1rem; */
 }
 
-.footer_form fieldset {
-  /* display: grid;
-  grid-template-columns: auto 3.375rem; */
-  border: unset;
-  margin: 0;
-  padding: 0;
+.footer__email {
+  display: grid;
+  grid-template-columns: auto 3.375rem;
   width: 100%;
 }
 
@@ -376,9 +373,42 @@ ul {
 }
 
 .footer__form button{
+  cursor: pointer;
   border: unset;
-  height: 2.875rem;
+  height: 100%;
+  transition: 0.3s all ease;
+  width: 80px;
+}
+
+.footer__form button:hover{
+  color: #fff;
+  background-color: var(--color-copy);
 }
 .footer__social{
   justify-self: end;
 }
+
+.footer__social a,
+.footer__social a:visited,
+.footer__social a:active {
+ color: #fff;
+}
+
+.footer__social a .fa-twitter,
+.footer__social a:visited .fa-twitter,
+.footer__social a:active .fa-twitter {
+ color: #000;
+}
+
+.footer hr {
+  border-color: #fff4;
+}
+
+.footer p {
+  text-align: center;
+  font-size: .875rem;
+  font-weight: 300;
+  margin:  2.5rem 0;
+  
+}
+
