@@ -18,20 +18,26 @@
 .btn:hover,
 .btn:active,
 .btn:focus,
-.btn--institutional {
+.btn--institutional,
+.btn--contact {
   border-color: var(--color-primary);
   background-color: var(--color-primary);
   color: #fff;
+}
+
+.btn--institutional:hover,
+.btn--contact:hover {
+  color: var(--color-copy);
+  background: none;
+  box-shadow: 0 1rem 1rem #0006;
+  /* border-color: unset; */
+}
+.btn--contact:hover{
+  color: white;
 }
 
 .btn--quote {
   color: var(--color-copy);
   border-color: var(--color-copy);
   background: unset;
-}
-
-.btn--institutional:hover {
-  color: var(--color-copy);
-  background: none;
-  /* border-color: unset; */
 }
