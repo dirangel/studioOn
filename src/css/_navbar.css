@@ -1,0 +1,42 @@
+.navbar {
+  /* position: fixed; */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: #000; vermelho/ verde / azul / transparência -0 - F */
+  color: #fff;
+}
+
+.navbar__container {
+  display: grid;
+  grid-template-columns: 1fr 9fr; /*logo tenha 1 fração da barra de navegação e também que o resto do conteúdo seja 9 frações*/
+  align-items: center; /*Centralizar os itens*/
+
+  width: 80vw;
+  height: 7.75rem; /*altura da nav*/
+  padding: 0 1rem;
+}
+.navbar__links {
+  justify-self: end; /*Propriedade de alinhamento para elemntos que estão dentro de um grid*/
+}
+.navbar__links li {
+  font-size: 0.875rem; /*14 pixel /16 pixel*/
+  margin-right: 3rem; /*definido o espaçamento entre as opções da lista empresas, eventos, galeria, depoimento, contatos*/
+  text-transform: uppercase; /*esse metodo determina que as letras da lista fiquem em caixa alta idependente de como esta no arq. html*/
+}
+
+.navbar__links a {
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar__links a.active {
+  color: var(--color-primary);
+}
+
+.navbar__links a:hover {
+  color: var(--color-primary);
+}

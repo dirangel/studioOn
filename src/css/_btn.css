@@ -1,0 +1,43 @@
+.btn {
+  padding: 1rem 2.5rem; /**/
+  border: 0.125rem solid #fff;
+  border-radius: 1.625rem; /*26pixels/16 = 1.625*/
+  color: var(--color-primary);
+  background: unset; /*Recetar a cor para o valor mais neutro*/
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase; /*caixa alta*/
+  transition: 0.5s all ease; /*Controla as animações do botão*/
+  width: 15rem;
+  height: 4rem;
+  border: 2px solid var(--color-primary);
+  padding: 1rem;
+}
+
+/*Seletor para mais de um caso*/
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn--institutional,
+.btn--contact {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn--institutional:hover,
+.btn--contact:hover {
+  color: var(--color-copy);
+  background: none;
+  box-shadow: 0 1rem 1rem #0006;
+  /* border-color: unset; */
+}
+.btn--contact:hover{
+  color: white;
+}
+
+.btn--quote {
+  color: var(--color-copy);
+  border-color: var(--color-copy);
+  background: unset;
+}
