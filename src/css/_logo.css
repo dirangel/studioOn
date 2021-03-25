@@ -1,0 +1,17 @@
+.logo-studion {
+  font-size: 2.375rem; /*Aumenta o tamago da fonte no caso a logo*/
+  font-weight: 900;
+  line-height: 1ch; /*altura da linha*/
+  text-transform: uppercase; /*caixa alta*/
+  text-align: right; /*Alinha de texto*/
+}
+
+.logo-studion__subtitle {
+  font-size: 0.875rem;
+  font-weight: 300; /*"espessura da fonte"*/
+}
+
+.logo-studion a {
+  text-decoration: none;
+  color: white;
+}
