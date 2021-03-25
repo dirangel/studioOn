@@ -23,25 +23,17 @@ ul {
   padding-left: 0; /*deslocar a lista para esquerda*/
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
+/* Tablet */
+/* @media screen and (min-width: 720px) {
+  :root {
+    font-size: 2.25vw;
+  }
+} */
 
-.logo-studion {
-  font-size: 2.375rem; /*Aumenta o tamago da fonte no caso a logo*/
-  font-weight: 900;
-  line-height: 1ch; /*altura da linha*/
-  text-transform: uppercase; /*caixa alta*/
-  text-align: right; /*Alinha de texto*/
-}
+/* Desktop */
+/* @media screen and (min-width: 1280px) {
+  :root {
+    font-size: 16px;
+  }
+} */
 
-.logo-studion__subtitle {
-  font-size: 0.875rem;
-  font-weight: 300; /*"espessura da fonte"*/
-}
-
-.logo-studion a {
-  text-decoration: none;
-  color: white;
-}
