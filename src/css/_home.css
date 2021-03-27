@@ -162,8 +162,9 @@
   }
 }
 
+/* mobile */
 .institutional__copy {
-  padding: 0 1rem 1.875rem 1rem; /* mobile */
+  padding: 0 1rem 1.875rem 1rem;
 }
 
 /* Desktop */
@@ -201,7 +202,7 @@
   background-position: 40% top;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1280px) {
   .quote {
     background-attachment: fixed;
     background-size: cover;
@@ -213,12 +214,13 @@
   display: grid;
   align-items: end;
   justify-items: end;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1280px) {
   .quote__container {
     align-items: center;
+    min-height: 80vh;
   }
 }
 
@@ -244,6 +246,7 @@
   margin: 0;
 }
 
+/* Mobile */
 .quote__copy h2 {
   font-size: 4rem;
   line-height: 4rem;
