@@ -1,29 +1,28 @@
 .navbar {
-  /* position: fixed; */
   position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
-  /* background-color: #000; vermelho/ verde / azul / transparência -0 - F */
   color: #fff;
 }
 
 .navbar__container {
   display: grid;
-  grid-template-columns: 1fr 9fr; /*logo tenha 1 fração da barra de navegação e também que o resto do conteúdo seja 9 frações*/
-  align-items: center; /*Centralizar os itens*/
+  grid-template-columns: 1fr 9fr;
+  align-items: center;
 
-  width: 80vw;
-  height: 7.75rem; /*altura da nav*/
+  width: 100vw;
+  height: 7.75rem;
   padding: 0 1rem;
 }
+
 .navbar__links {
   display: none;
-  justify-self: end; /*Propriedade de alinhamento para elemntos que estão dentro de um grid*/
+  justify-self: end;
 }
 
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1280px) {
   .navbar__links {
     display: flex;
   }
@@ -43,17 +42,17 @@
   margin: 0;
   padding: 3rem 2rem;
 
-  background: #000c;
+  background: #000e;
 }
 
 .navbar__links li {
   font-size: 1.75rem;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
-@media screen and (min-width: 1280px){
-  .navbar__links{
-    font-size: 0.875rem; /*14 pixel /16 pixel*/
+@media screen and (min-width: 1280px) {
+  .navbar__links li {
+    font-size: 0.875rem;
     margin-right: 3rem;
   }
 }
@@ -87,10 +86,9 @@
   justify-self: end;
   align-self: start;
   margin-top: 2rem;
-  margin-left: 4rem;
 }
 
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1280px) {
   .navbar__menu-btn {
     display: none;
   }
