@@ -136,6 +136,14 @@
   padding: 0 0 4.375rem 0;
 }
 
+/* Tablet */
+@media screen and (min-width: 720px) {
+  .institutional {
+    grid-template-columns: auto auto;
+    padding: 4.375rem;
+  }
+}
+
 /* Desktop */
 @media screen and (min-width: 1280px) {
   .institutional {
