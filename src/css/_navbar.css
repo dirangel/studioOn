@@ -19,12 +19,43 @@
   padding: 0 1rem;
 }
 .navbar__links {
+  display: none;
   justify-self: end; /*Propriedade de alinhamento para elemntos que estão dentro de um grid*/
 }
+
+@media screen and (min-width: 1280px){
+  .navbar__links {
+    display: flex;
+  }
+}
+
+.navbar__links.active {
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 3rem 2rem;
+
+  background: #000c;
+}
+
 .navbar__links li {
-  font-size: 0.875rem; /*14 pixel /16 pixel*/
-  margin-right: 3rem; /*definido o espaçamento entre as opções da lista empresas, eventos, galeria, depoimento, contatos*/
-  text-transform: uppercase; /*esse metodo determina que as letras da lista fiquem em caixa alta idependente de como esta no arq. html*/
+  font-size: 1.75rem;
+  text-transform: uppercase; 
+}
+
+@media screen and (min-width: 1280px){
+  .navbar__links{
+    font-size: 0.875rem; /*14 pixel /16 pixel*/
+    margin-right: 3rem;
+  }
 }
 
 .navbar__links a {
@@ -39,4 +70,28 @@
 
 .navbar__links a:hover {
   color: var(--color-primary);
+}
+
+.navbar__menu-btn {
+  cursor: pointer;
+
+  position: relative;
+  z-index: 10;
+
+  font-size: 2rem;
+  width: fit-content;
+  color: #fff;
+  background: unset;
+  border: unset;
+
+  justify-self: end;
+  align-self: start;
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+
+@media screen and (min-width: 1280px){
+  .navbar__menu-btn {
+    display: none;
+  }
 }
